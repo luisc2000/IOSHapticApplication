@@ -12,6 +12,9 @@ struct InstructionsPage: View {
         VStack{
             Text("Welcome to Game #1")
             Text("Tap on the numbers in order from 1 - 9")
+            Button("Continue") {
+                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+            }
         }
     }
 }
