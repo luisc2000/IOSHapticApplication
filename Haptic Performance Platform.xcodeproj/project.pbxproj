@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		681AFFD028DE383E0073C883 /* InstructionsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681AFFCF28DE383E0073C883 /* InstructionsPage.swift */; };
+		681AFFD228DE45DA0073C883 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681AFFD128DE45DA0073C883 /* Storyboard.storyboard */; };
 		B3212CCC28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3212CCB28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift */; };
 		B3212CCE28C1C5E3000F826E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3212CCD28C1C5E3000F826E /* ContentView.swift */; };
 		B3212CD028C1C5E5000F826E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3212CCF28C1C5E5000F826E /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		681AFFCF28DE383E0073C883 /* InstructionsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsPage.swift; sourceTree = "<group>"; };
+		681AFFD128DE45DA0073C883 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		B3212CC828C1C5E3000F826E /* Haptic Performance Platform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Haptic Performance Platform.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3212CCB28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic_Performance_PlatformApp.swift; sourceTree = "<group>"; };
 		B3212CCD28C1C5E3000F826E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,12 +65,14 @@
 			children = (
 				B3212CCB28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift */,
 				B351271928C31FE100220FE9 /* click.mp3 */,
+				681AFFD128DE45DA0073C883 /* Storyboard.storyboard */,
 				B3212CCD28C1C5E3000F826E /* ContentView.swift */,
 				B3224C1C28D022500082CB77 /* correct.mp3 */,
 				B3224C1B28D022500082CB77 /* wrong.mp3 */,
 				B3224C1928D018CC0082CB77 /* Stack.swift */,
 				B3212CCF28C1C5E5000F826E /* Assets.xcassets */,
 				B3212CD128C1C5E5000F826E /* Preview Content */,
+				681AFFCF28DE383E0073C883 /* InstructionsPage.swift */,
 			);
 			path = "Haptic Performance Platform";
 			sourceTree = "<group>";
@@ -142,6 +148,7 @@
 				B351271A28C31FE100220FE9 /* click.mp3 in Resources */,
 				B3212CD328C1C5E5000F826E /* Preview Assets.xcassets in Resources */,
 				B3212CD028C1C5E5000F826E /* Assets.xcassets in Resources */,
+				681AFFD228DE45DA0073C883 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +162,7 @@
 				B3212CCE28C1C5E3000F826E /* ContentView.swift in Sources */,
 				B3224C1A28D018CC0082CB77 /* Stack.swift in Sources */,
 				B3212CCC28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift in Sources */,
+				681AFFD028DE383E0073C883 /* InstructionsPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
