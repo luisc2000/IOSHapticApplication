@@ -8,6 +8,7 @@
 import SwiftUI
 import AVFoundation
 var stack = Stack()
+var correct = false
 //myStack.push(3)
 
 //    ! means that it will be initially null but shouldn't be null in the future
@@ -17,13 +18,14 @@ var stack = Stack()
 
 struct ContentView: View {
     var nums = [1, 5, 4, 7, 8, 2, 9, 6, 3] // call this from the API
+    @State var score = 100
     
     @State var count = 0
     @State var timerRunning = false
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var first: Bool = true
 
-    
+   
     func playSound(fileName: String)
     {
         let url = Bundle.main.url(forResource: fileName, withExtension: "mp3")
@@ -59,11 +61,15 @@ struct ContentView: View {
                 stack.push(button)
 //                print("1 correct sound: \(button)")
                 playSound(fileName: "correct")
+                //score = score + 5
+                correct = true
             }
             else
             {
                 print("2 wrong sound: \(button)")
                 playSound(fileName: "wrong")
+                //score = score - 2
+                correct = false
             }
         }
         else
@@ -73,11 +79,13 @@ struct ContentView: View {
                 stack.push(button)
 //                print("3 correct sound: \(button)")
                 playSound(fileName: "correct")
+                correct = true
             }
             else
             {
 //                print("4 wrong sound: \(button)")
                 playSound(fileName: "wrong")
+                correct = false
             }
             
             if stack.len() == 9
@@ -92,40 +100,138 @@ struct ContentView: View {
     var body: some View {
         
         ZStack {
-            
             VStack {
+                Text("Score \(score)").id("scoreText")
+
+//                Button(action: {
+//                    timerRunning = !timerRunning
+//                    playSound(fileName: "click")
+//                },
+//                       label: {Text("Score: \(score)").onReceive(timer) {_ in
+//                    if timerRunning {
+//                        if soundStack.peek() == 1{
+//                            score = score + 5
+//                        }
+//                        else {
+//                            score = score - 2
+//                        }
+//                        //count += 1
+//                    }
+//                } .frame(width: 100, height: 60).background(Color.green).foregroundColor(Color.black)})
                 HStack {
-                    Button(action: {stackLogic(button: nums[0])},
+                    
+                    Button(action: {
+                        stackLogic(button: nums[0])
+                        if correct{
+                            score = score + 5
+                            
+                        }
+                        else{
+                            score = score - 2
+                        }
+                    },
                            label: {Text(String(nums[0])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
 
                     
-                    Button(action: {stackLogic(button: nums[1])},
+                    Button(action: {
+                        stackLogic(button: nums[1])
+                        if correct {
+                            score = score + 5
+                            
+                        }
+                        else{
+                            score = score - 2
+                        }
+                    },
                            label: {Text(String(nums[1])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                     
-                    Button(action: {stackLogic(button: nums[2])},
+                    Button(action: {
+                        stackLogic(button: nums[2])
+                        if correct {
+                            score = score + 5
+                            
+                        }
+                        else{
+                            score = score - 2
+                        }
+                    },
                            label: {Text(String(nums[2])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
 //
                 }
                 
                 HStack {
-                    Button(action: {stackLogic(button: nums[3])},
+                    Button(action: {
+                        stackLogic(button: nums[3])
+                        if correct {
+                            score = score + 5
+                            
+                        }
+                        else{
+                            score = score - 2
+                        }
+                    },
                            label: {Text(String(nums[3])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                     
-                    Button(action: {stackLogic(button: nums[4])},
+                    Button(action: {
+                        stackLogic(button: nums[4])
+                        if correct{
+                            score = score + 5
+                            
+                        }
+                        else{
+                            score = score - 2
+                        }
+                    },
                            label: {Text(String(nums[4])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                     
-                    Button(action: {stackLogic(button: nums[5])},
+                    Button(action: {
+                        stackLogic(button: nums[5])
+                        if correct{
+                            score = score + 5
+                            
+                        }
+                        else{
+                            score = score - 2
+                        }
+                    },
                            label: {Text(String(nums[5])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                 }
                 
                 HStack {
-                    Button(action: {stackLogic(button: nums[6])},
+                    Button(action: {
+                        stackLogic(button: nums[6])
+                        if correct {
+                            score = score + 5
+                            
+                        }
+                        else{
+                            score = score - 2
+                        }
+                    },
                            label: {Text(String(nums[6])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                     
-                    Button(action: {stackLogic(button: nums[7])},
+                    Button(action: {
+                        stackLogic(button: nums[7])
+                        if correct{
+                            score = score + 5
+                            
+                        }
+                        else{
+                            score = score - 2
+                        }
+                    },
                            label: {Text(String(nums[7])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                     
-                    Button(action: {stackLogic(button: nums[8])},
+                    Button(action: {
+                        stackLogic(button: nums[8])
+                        if correct{
+                            score = score + 5
+                            
+                        }
+                        else{
+                            score = score - 2
+                        }
+                    },
                            label: {Text(String(nums[8])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                 }
                 
@@ -133,11 +239,11 @@ struct ContentView: View {
                     timerRunning = !timerRunning
                     playSound(fileName: "click")
                 },
-                       label: {Text("\(count)").onReceive(timer) {_ in
+                       label: {Text("Timer: \(count)").onReceive(timer) {_ in
                     if timerRunning {
                         count += 1
                     }
-                } .frame(width: 80, height: 60).background(Color.green).foregroundColor(Color.black)})
+                } .frame(width: 150, height: 60).background(Color(red: 173 / 255, green: 216 / 255, blue: 230 / 255)).foregroundColor(Color.black)})
             }
             
         }
