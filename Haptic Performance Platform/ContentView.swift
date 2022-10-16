@@ -10,6 +10,7 @@ import AVFoundation
 var stack = Stack()
 var correct = false
 var nums = [1, 5, 4, 7, 8, 2, 9, 6, 3].shuffled()
+var game2 = false
 //nums.shuffle()
 //myStack.push(3)
 
@@ -95,6 +96,7 @@ struct ContentView: View {
                 print("Success, move to the next level")
                 timerRunning = !timerRunning
                 print("You spent \(count) seconds on this level")
+                game2 = true
             }
         }
     }
@@ -249,6 +251,15 @@ struct ContentView: View {
             }
             
         }
+        if game2 == true {
+            NavigationLink(destination: Game2(),label: {
+                Text("Go to Game2!")
+                    .bold()
+                    .frame(width: 280, height: 50).background(Color(red: 100 / 255, green: 149 / 255, blue: 237 / 255))
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            })
+        }
     }
 }
 
@@ -258,35 +269,3 @@ struct ContentView_Previews: PreviewProvider {
             .previewDevice("iPhone 11")
     }
 }
-
-
-/*
-
- stack = []
-
- while(True):
-
-   button = input()
-   button = int(button)
-
-   if len(stack) == 0:
-     if button == 1:
-           # add button.val to stack and play correct sound
-           stack.append(button)
-           print("correct sound")
-     else:
-           # play wrong sound
-           print("play wrong sound")
-   else:
-       if button - stack[-1] == 1:
-           stack.append(button)
-           print("correct sound")
-       else:
-           # play wrong sound
-           print("play wrong sound")
-       if len(stack) == 9:
-           # all numbers are on the stack and in order so passed the level
-           print("Success, move to the next level")
-           break
-    
-*/
