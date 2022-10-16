@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		681AFFD028DE383E0073C883 /* DetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681AFFCF28DE383E0073C883 /* DetailsPage.swift */; };
 		68850FD428EA8AC60058B459 /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68850FD328EA8AC60058B459 /* TermsAndConditions.swift */; };
+		68FE9A6D28F38EBB006FD538 /* Game2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE9A6C28F38EBB006FD538 /* Game2.swift */; };
 		B3212CCC28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3212CCB28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift */; };
 		B3212CCE28C1C5E3000F826E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3212CCD28C1C5E3000F826E /* ContentView.swift */; };
 		B3212CD028C1C5E5000F826E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3212CCF28C1C5E5000F826E /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		681AFFCF28DE383E0073C883 /* DetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPage.swift; sourceTree = "<group>"; };
 		68850FD328EA8AC60058B459 /* TermsAndConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
+		68FE9A6C28F38EBB006FD538 /* Game2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2.swift; sourceTree = "<group>"; };
 		B3212CC828C1C5E3000F826E /* Haptic Performance Platform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Haptic Performance Platform.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3212CCB28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic_Performance_PlatformApp.swift; sourceTree = "<group>"; };
 		B3212CCD28C1C5E3000F826E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				681AFFCF28DE383E0073C883 /* DetailsPage.swift */,
 				B3CFC43E28EA362B007AF01E /* InstructionsPage.swift */,
 				68850FD328EA8AC60058B459 /* TermsAndConditions.swift */,
+				68FE9A6C28F38EBB006FD538 /* Game2.swift */,
 			);
 			path = "Haptic Performance Platform";
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				B3224C1A28D018CC0082CB77 /* Stack.swift in Sources */,
 				B3212CCC28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift in Sources */,
 				68850FD428EA8AC60058B459 /* TermsAndConditions.swift in Sources */,
+				68FE9A6D28F38EBB006FD538 /* Game2.swift in Sources */,
 				B3CFC43F28EA362C007AF01E /* InstructionsPage.swift in Sources */,
 				681AFFD028DE383E0073C883 /* DetailsPage.swift in Sources */,
 			);
