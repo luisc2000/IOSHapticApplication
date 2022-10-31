@@ -9,10 +9,9 @@ import SwiftUI
 import AVFoundation
 var stack = Stack()
 var correct = false
-var nums = [1, 5, 4, 7, 8, 2, 9, 6, 3].shuffled()
+var nums = [1, 5, 4, 7, 8, 2, 9, 6, 3]
 var game2 = false
-//nums.shuffle()
-//myStack.push(3)
+var first = true
 
 //    ! means that it will be initially null but shouldn't be null in the future
     var player: AVAudioPlayer!
@@ -21,6 +20,8 @@ var game2 = false
 
 struct ContentView: View {
     //var nums = [1, 5, 4, 7, 8, 2, 9, 6, 3] // call this from the API
+    @State private var numbers: [Int] = []
+    @State private var experiment_description: String = ""
     @State var score = 100
     //nums.shuffle()
     @State var count = 0
@@ -105,23 +106,26 @@ struct ContentView: View {
         
         ZStack {
             VStack {
+                
                 Text("Score \(score)").id("scoreText")
-
-//                Button(action: {
-//                    timerRunning = !timerRunning
-//                    playSound(fileName: "click")
-//                },
-//                       label: {Text("Score: \(score)").onReceive(timer) {_ in
-//                    if timerRunning {
-//                        if soundStack.peek() == 1{
-//                            score = score + 5
-//                        }
-//                        else {
-//                            score = score - 2
-//                        }
-//                        //count += 1
-//                    }
-//                } .frame(width: 100, height: 60).background(Color.green).foregroundColor(Color.black)})
+                if first == true
+                {
+                    Text("").onAppear{
+                        Task{
+                            let (data, _) = try await URLSession.shared.data(from: URL(string:link)!)
+                            let decodedResponse = try? JSONDecoder().decode(API.self, from: data)
+                            print(decodedResponse)
+                            numbers = decodedResponse?.numbers ?? []
+                        }
+                        if numbers.count > 0
+                        {
+                            nums = numbers
+                            first = false
+                        }
+                        
+                    }
+                    
+                }
                 HStack {
                     
                     Button(action: {

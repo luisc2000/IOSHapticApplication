@@ -18,6 +18,7 @@
 		B3224C1D28D022500082CB77 /* wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3224C1B28D022500082CB77 /* wrong.mp3 */; };
 		B3224C1E28D022500082CB77 /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3224C1C28D022500082CB77 /* correct.mp3 */; };
 		B351271A28C31FE100220FE9 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B351271928C31FE100220FE9 /* click.mp3 */; };
+		B3C5E306290A3AAD008A11FB /* JSONTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C5E305290A3AAD008A11FB /* JSONTest.swift */; };
 		B3CFC43F28EA362C007AF01E /* InstructionsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFC43E28EA362B007AF01E /* InstructionsPage.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		B3224C1B28D022500082CB77 /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong.mp3; sourceTree = "<group>"; };
 		B3224C1C28D022500082CB77 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
 		B351271928C31FE100220FE9 /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
+		B3C5E305290A3AAD008A11FB /* JSONTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTest.swift; sourceTree = "<group>"; };
 		B3CFC43E28EA362B007AF01E /* InstructionsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 				B3CFC43E28EA362B007AF01E /* InstructionsPage.swift */,
 				68850FD328EA8AC60058B459 /* TermsAndConditions.swift */,
 				68FE9A6C28F38EBB006FD538 /* Game2.swift */,
+				B3C5E305290A3AAD008A11FB /* JSONTest.swift */,
 			);
 			path = "Haptic Performance Platform";
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				B3212CCE28C1C5E3000F826E /* ContentView.swift in Sources */,
 				B3224C1A28D018CC0082CB77 /* Stack.swift in Sources */,
 				B3212CCC28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift in Sources */,
+				B3C5E306290A3AAD008A11FB /* JSONTest.swift in Sources */,
 				68850FD428EA8AC60058B459 /* TermsAndConditions.swift in Sources */,
 				68FE9A6D28F38EBB006FD538 /* Game2.swift in Sources */,
 				B3CFC43F28EA362C007AF01E /* InstructionsPage.swift in Sources */,

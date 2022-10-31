@@ -8,23 +8,32 @@
 import SwiftUI
 
 struct InstructionsPage: View {
+    @State private var experiment_description: String = ""
     var body: some View {
-        //NavigationView{
-            VStack{
-                Text("Welcome to Game #1").font(.largeTitle)
-                    .padding(-120)
-                Text("Tap on the numbers in order from 1 - 9")
-                    .padding(100)
-                
-                NavigationLink(destination: TermsAndConditions(),label: {
-                    Text("Continue")
-                        .bold()
-                        .frame(width: 280, height: 50).background(Color(red: 100 / 255, green: 149 / 255, blue: 237 / 255))
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                })
+        
+        
+        VStack{
+            Text("Welcome to Game #1").font(.largeTitle)
+                .padding(-120)
+            
+            Text(experiment_description).onAppear{
+                Task{
+                    let (data, _) = try await URLSession.shared.data(from: URL(string:link)!)
+                    let decodedResponse = try? JSONDecoder().decode(API.self, from: data)
+                    experiment_description = decodedResponse?.experiment_description ?? ""
+                }
             }
-        //}
+            .padding(.bottom, 100)
+            .padding(.top, 100)
+            
+            NavigationLink(destination: TermsAndConditions(),label: {
+                Text("Continue")
+                    .bold()
+                    .frame(width: 280, height: 50).background(Color(red: 100 / 255, green: 149 / 255, blue: 237 / 255))
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            })
+        }
     }
 }
 
