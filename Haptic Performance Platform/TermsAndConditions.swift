@@ -29,7 +29,7 @@ struct TermsAndConditions: View {
                 Text(user_agreements[0])
             }
             
-            NavigationLink(destination: ContentView(),label: {
+            NavigationLink(destination: InstructionsPage(),label: {
                 Text("I Agree")
                     .bold()
                     .frame(width: 280, height: 50).background(Color(red: 100 / 255, green: 149 / 255, blue: 237 / 255))

@@ -27,7 +27,7 @@ struct DetailsPage: View {
                         Rectangle()
                             .stroke(Color.black, lineWidth: 3)
                     ).padding()
-                NavigationLink(destination: InstructionsPage(),label: {
+                NavigationLink(destination: TermsAndConditions(),label: {
                     Text("Start Game")
                         .bold()
                         .frame(width: 280, height: 50).background(Color(red: 100 / 255, green: 149 / 255, blue: 237 / 255))

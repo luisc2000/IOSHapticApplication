@@ -26,7 +26,7 @@ struct InstructionsPage: View {
             .padding(.bottom, 100)
             .padding(.top, 100)
             
-            NavigationLink(destination: TermsAndConditions(),label: {
+            NavigationLink(destination: ContentView(),label: {
                 Text("Continue")
                     .bold()
                     .frame(width: 280, height: 50).background(Color(red: 100 / 255, green: 149 / 255, blue: 237 / 255))
