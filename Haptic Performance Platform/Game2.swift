@@ -139,8 +139,11 @@ struct Game2: View {
                             score = score + 5
                             
                         }
-                        else{
+                        else if (score > 1){
                             score = score - 2
+                        }
+                        else {
+                            score = 0;
                         }
                     },
                            label: {Text(String(nums2[2])) .background(Color.clear).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).position(x: 200, y: 200)
@@ -226,7 +229,7 @@ struct Game2: View {
                     if timerRunning {
                         count += 1
                     }
-                } .frame(width: 150, height: 60).background(Color(red: 173 / 255, green: 216 / 255, blue: 230 / 255)).foregroundColor(Color.black)})
+                } .frame(width: 150, height: 60).background(Color(red: 173 / 255, green: 216 / 255, blue: 230 / 255)).foregroundColor(Color.black)}).navigationBarBackButtonHidden(true)
             }
 }
 

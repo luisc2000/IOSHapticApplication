@@ -6,23 +6,27 @@
 //
 
 import SwiftUI
-
+var space = " ";
 struct DetailsPage: View {
+    @State var parID = "";
+    @State var expID = "";
+    //@State var showAlert = false;
     var body: some View {
+        
         
         NavigationView{
             VStack{
                 Text("iOS Haptic App").font(.largeTitle)
                     .padding(-120)
                 Text("Participant ID")
-                TextField("Participant ID here", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/).padding(20).background(Color(red: 240 / 255, green: 255 / 255, blue: 255 / 255))
+                TextField("Participant ID here", text: $parID).padding(20).background(Color(red: 240 / 255, green: 255 / 255, blue: 255 / 255))
                     .background(
                         Rectangle()
                             .stroke(Color.black, lineWidth: 3)
                     ).padding()
-                
+                //showAlert = parID.contains(" ");
                 Text("Experiment ID")
-                TextField("Experiment ID here", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/).padding(20).background(Color(red: 240 / 255, green: 255 / 255, blue: 255 / 255))
+                TextField("Experiment ID here", text: $expID).padding(20).background(Color(red: 240 / 255, green: 255 / 255, blue: 255 / 255))
                     .background(
                         Rectangle()
                             .stroke(Color.black, lineWidth: 3)

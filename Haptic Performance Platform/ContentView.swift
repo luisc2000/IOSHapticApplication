@@ -127,122 +127,129 @@ struct ContentView: View {
                     
                 }
                 HStack {
-                    
-                    Button(action: {
-                        stackLogic(button: nums[0])
-                        if correct{
-                            score = score + 5
-                            
-                        }
-                        else{
-                            score = score - 2
-                        }
-                    },
-                           label: {Text(String(nums[0])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
-
-                    
-                    Button(action: {
-                        stackLogic(button: nums[1])
-                        if correct {
-                            score = score + 5
-                            
-                        }
-                        else{
-                            score = score - 2
-                        }
-                    },
-                           label: {Text(String(nums[1])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
-                    
-                    Button(action: {
-                        stackLogic(button: nums[2])
-                        if correct {
-                            score = score + 5
-                            
-                        }
-                        else{
-                            score = score - 2
-                        }
-                    },
-                           label: {Text(String(nums[2])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
-//
+                    Section{
+                        Button(action: {
+                            stackLogic(button: nums[0])
+                            if correct{
+                                score = score + 5
+                                
+                            }
+                            else if (score > 1){
+                                score = score - 2
+                            }
+                            else {
+                                score = 0;
+                            }
+                        },
+                               label: {Text(String(nums[0])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                        
+                        
+                        Button(action: {
+                            stackLogic(button: nums[1])
+                            if correct {
+                                score = score + 5
+                                
+                            }
+                            else{
+                                score = score - 2
+                            }
+                        },
+                               label: {Text(String(nums[1])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                        
+                        Button(action: {
+                            stackLogic(button: nums[2])
+                            if correct {
+                                score = score + 5
+                                
+                            }
+                            else{
+                                score = score - 2
+                            }
+                        },
+                               label: {Text(String(nums[2])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                        //
+                    }
                 }
                 
                 HStack {
-                    Button(action: {
-                        stackLogic(button: nums[3])
-                        if correct {
-                            score = score + 5
-                            
-                        }
-                        else{
-                            score = score - 2
-                        }
-                    },
-                           label: {Text(String(nums[3])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
-                    
-                    Button(action: {
-                        stackLogic(button: nums[4])
-                        if correct{
-                            score = score + 5
-                            
-                        }
-                        else{
-                            score = score - 2
-                        }
-                    },
-                           label: {Text(String(nums[4])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
-                    
-                    Button(action: {
-                        stackLogic(button: nums[5])
-                        if correct{
-                            score = score + 5
-                            
-                        }
-                        else{
-                            score = score - 2
-                        }
-                    },
-                           label: {Text(String(nums[5])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                    Section {
+                        Button(action: {
+                            stackLogic(button: nums[3])
+                            if correct {
+                                score = score + 5
+                                
+                            }
+                            else{
+                                score = score - 2
+                            }
+                        },
+                               label: {Text(String(nums[3])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                        
+                        Button(action: {
+                            stackLogic(button: nums[4])
+                            if correct{
+                                score = score + 5
+                                
+                            }
+                            else{
+                                score = score - 2
+                            }
+                        },
+                               label: {Text(String(nums[4])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                        
+                        Button(action: {
+                            stackLogic(button: nums[5])
+                            if correct{
+                                score = score + 5
+                                
+                            }
+                            else{
+                                score = score - 2
+                            }
+                        },
+                               label: {Text(String(nums[5])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                    }
                 }
                 
                 HStack {
-                    Button(action: {
-                        stackLogic(button: nums[6])
-                        if correct {
-                            score = score + 5
-                            
-                        }
-                        else{
-                            score = score - 2
-                        }
-                    },
-                           label: {Text(String(nums[6])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
-                    
-                    Button(action: {
-                        stackLogic(button: nums[7])
-                        if correct{
-                            score = score + 5
-                            
-                        }
-                        else{
-                            score = score - 2
-                        }
-                    },
-                           label: {Text(String(nums[7])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
-                    
-                    Button(action: {
-                        stackLogic(button: nums[8])
-                        if correct{
-                            score = score + 5
-                            
-                        }
-                        else{
-                            score = score - 2
-                        }
-                    },
-                           label: {Text(String(nums[8])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                    Section {
+                        Button(action: {
+                            stackLogic(button: nums[6])
+                            if correct {
+                                score = score + 5
+                                
+                            }
+                            else{
+                                score = score - 2
+                            }
+                        },
+                               label: {Text(String(nums[6])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                        
+                        Button(action: {
+                            stackLogic(button: nums[7])
+                            if correct{
+                                score = score + 5
+                                
+                            }
+                            else{
+                                score = score - 2
+                            }
+                        },
+                               label: {Text(String(nums[7])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                        
+                        Button(action: {
+                            stackLogic(button: nums[8])
+                            if correct{
+                                score = score + 5
+                                
+                            }
+                            else{
+                                score = score - 2
+                            }
+                        },
+                               label: {Text(String(nums[8])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                    }
                 }
-                
                 Button(action: {
                     timerRunning = !timerRunning
                     playSound(fileName: "click")
@@ -251,17 +258,18 @@ struct ContentView: View {
                     if timerRunning {
                         count += 1
                     }
-                } .frame(width: 150, height: 60).background(Color(red: 173 / 255, green: 216 / 255, blue: 230 / 255)).foregroundColor(Color.black)})
+                } .frame(width: 150, height: 60).background(Color(red: 173 / 255, green: 216 / 255, blue: 230 / 255)).foregroundColor(Color.black)}).navigationBarBackButtonHidden(true)
             }
             
         }
         if game2 == true {
+            
             NavigationLink(destination: Game2(),label: {
                 Text("Go to Game2!")
                     .bold()
                     .frame(width: 280, height: 50).background(Color(red: 100 / 255, green: 149 / 255, blue: 237 / 255))
                     .foregroundColor(.white)
-                    .cornerRadius(10)
+                    .cornerRadius(10).navigationBarBackButtonHidden(true)
             })
         }
     }
