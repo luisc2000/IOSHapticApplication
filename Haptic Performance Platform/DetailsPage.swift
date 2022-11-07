@@ -11,6 +11,7 @@ struct DetailsPage: View {
     @State var parID = "";
     @State var expID = "";
     @State var moveon = false;
+    @State var moveon1 = false;
     var body: some View {
         
         
@@ -30,8 +31,8 @@ struct DetailsPage: View {
                         }
                         else {
                             moveon = true
-                            
                         }
+                        print("moveon: ",moveon)
                     }
                 //showAlert = parID.contains(" ");
 //
@@ -41,8 +42,18 @@ struct DetailsPage: View {
                         Rectangle()
                             .stroke(Color.black, lineWidth: 3)
                     ).padding()
+                    .onChange(of: expID) { [expID] newValue in
+                        if expID.contains(" "){
+                            moveon1 = false
+                        }
+                        else {
+                            moveon1 = true
+                        }
+                        print("moveon1: ",moveon1)
+                        
+                    }
                 
-                if moveon == true{
+                if moveon == true && moveon1 == true{
                     NavigationLink(destination: TermsAndConditions(),label: {
                         Text("Start Game")
                             .bold()
