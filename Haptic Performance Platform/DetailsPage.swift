@@ -10,7 +10,7 @@ var space = " ";
 struct DetailsPage: View {
     @State var parID = "";
     @State var expID = "";
-    //@State var showAlert = false;
+    @State var moveon = false;
     var body: some View {
         
         
@@ -24,20 +24,34 @@ struct DetailsPage: View {
                         Rectangle()
                             .stroke(Color.black, lineWidth: 3)
                     ).padding()
+                    .onChange(of: parID) { [parID] newValue in
+                        if parID.contains(" "){
+                            moveon = false
+                        }
+                        else {
+                            moveon = true
+                            
+                        }
+                    }
                 //showAlert = parID.contains(" ");
+//
                 Text("Experiment ID")
                 TextField("Experiment ID here", text: $expID).padding(20).background(Color(red: 240 / 255, green: 255 / 255, blue: 255 / 255))
                     .background(
                         Rectangle()
                             .stroke(Color.black, lineWidth: 3)
                     ).padding()
-                NavigationLink(destination: TermsAndConditions(),label: {
-                    Text("Start Game")
-                        .bold()
-                        .frame(width: 280, height: 50).background(Color(red: 100 / 255, green: 149 / 255, blue: 237 / 255))
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                })
+                
+                if moveon == true{
+                    NavigationLink(destination: TermsAndConditions(),label: {
+                        Text("Start Game")
+                            .bold()
+                            .frame(width: 280, height: 50).background(Color(red: 100 / 255, green: 149 / 255, blue: 237 / 255))
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    })
+                }
+                
             }
         }
     }

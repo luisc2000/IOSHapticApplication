@@ -10,6 +10,7 @@ import SwiftUI
 struct TermsAndConditions: View {
     @State private var user_agreements: [String] = []
     @State var isOn: Bool = false
+    @State var isOn1: Bool = false
     var body: some View {
         VStack{
             Text("Terms and Conditions").font(.largeTitle)
@@ -28,6 +29,8 @@ struct TermsAndConditions: View {
             Toggle("Agree to all terms and conditions", isOn: $isOn)
                   .padding()
             
+            Toggle("Agree to all terms and conditions", isOn: $isOn1)
+                  .padding()
             
             if user_agreements.count > 0
             {
