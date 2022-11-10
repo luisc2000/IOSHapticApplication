@@ -141,7 +141,7 @@ struct ContentView: View {
                                 score = 0;
                             }
                         },
-                               label: {Text(String(nums[0])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[0])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                         
                         
                         Button(action: {
@@ -154,7 +154,7 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[1])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[1])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                         
                         Button(action: {
                             stackLogic(button: nums[2])
@@ -166,7 +166,7 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[2])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[2])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                         //
                     }
                 }
@@ -183,7 +183,7 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[3])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[3])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                         
                         Button(action: {
                             stackLogic(button: nums[4])
@@ -195,7 +195,7 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[4])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[4])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                         
                         Button(action: {
                             stackLogic(button: nums[5])
@@ -207,7 +207,7 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[5])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[5])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                     }
                 }
                 
@@ -223,7 +223,7 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[6])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[6])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                         
                         Button(action: {
                             stackLogic(button: nums[7])
@@ -235,7 +235,7 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[7])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[7])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                         
                         Button(action: {
                             stackLogic(button: nums[8])
@@ -247,7 +247,7 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[8])) .frame(width: 100, height: 100).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[8])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
                     }
                 }
 //                Button(action: {
