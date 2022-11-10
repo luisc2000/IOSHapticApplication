@@ -10,45 +10,28 @@ var space = " ";
 struct DetailsPage: View {
     @State var parID = "";
     @State var expID = "";
-    @State var email = "";
-    @State var moveon = false;
-    @State var moveon1 = false;
     @State var isEmailValid = false;
+    @State var isEmailValid2 = false;
+    func textFieldValidatorEmail() -> Bool {
+            if parID.contains(" ") {
+                return false
+            }
+            return true
+    }
     
-//    func textFieldValidatorEmail(_ string: String) -> Bool {
-//            if string.count > 100 {
-//                return false
-//            }
-//            let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}" // short format
-//            let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
-//            return emailPredicate.evaluate(with: string)
-//    }
-//    @State private var username: String = ""
+    func textFieldValidatorEmail1() -> Bool {
+        if expID.contains(" ") {
+                return false
+            }
+            return true
+    }
+    
     var body: some View {
         
         
         
         NavigationView{
             VStack{
-                
-//                TextField("Email", text: $email, onEditingChanged: { (isChanged) in
-//                                 if !isChanged {
-//                                      if self.textFieldValidatorEmail(self.email) {
-//                                        self.isEmailValid = true
-//                                      } else {
-//                                        self.isEmailValid = false
-////                                        self.email = ""
-//                                      }
-//                                     print("email is: ", self.isEmailValid)
-//                                }
-//                })
-//                .autocapitalization(.none)
-//
-//                if !self.isEmailValid {
-//                      Text("Email is not valid")
-//                }
-
-                
                 
                 Text("iOS Haptic App").font(.largeTitle)
                     .padding(-120)
@@ -59,39 +42,23 @@ struct DetailsPage: View {
                         Rectangle()
                             .stroke(Color.black, lineWidth: 3)
                     ).padding(20)
-                    .onChange(of: parID) { [parID] newValue in
-                        if parID.contains(" "){
-                            moveon = false
-//                            print("space: ",parID)
-                        }
-                        else {
-                            moveon = true
-//                            print("no space: ",parID)
-                        }
-                        print("parID: ",$parID)
-                    }
-                //showAlert = parID.contains(" ");
+                
+                if !textFieldValidatorEmail() {
+                      Text("Please remove any spaces from the Participant ID")
+                }
 //
                 Text("Experiment ID")
                 TextField("Experiment ID here", text: $expID).padding(10).background(Color(red: 240 / 255, green: 255 / 255, blue: 255 / 255))
                     .background(
                         Rectangle()
                             .stroke(Color.black, lineWidth: 3)
-                    ).padding()
-                    .onChange(of: expID) { [expID] newValue in
-                        if expID.contains(" "){
-                            moveon1 = false
-                            print("space: ",parID)
-                        }
-                        else {
-                            moveon1 = true
-                            print("no space: ",parID)
-                        }
-                        
-                        
-                    }
+                    ).padding(20)
                 
-                if moveon == true && moveon1 == true{
+                if !textFieldValidatorEmail1() {
+                      Text("Please remove any spaces from the Experiment ID")
+                }
+                
+                if textFieldValidatorEmail() && textFieldValidatorEmail1() && (parID != "" && expID != ""){
                     NavigationLink(destination: TermsAndConditions(),label: {
                         Text("Start Game")
                             .bold()
