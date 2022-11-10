@@ -37,6 +37,7 @@ struct TermsAndConditions: View {
                 Text(user_agreements[0])
             }
             
+            if isOn && isOn1{
             NavigationLink(destination: InstructionsPage(),label: {
                 Text("I Agree")
                     .bold()
@@ -44,6 +45,7 @@ struct TermsAndConditions: View {
                     .foregroundColor(.white)
                     .cornerRadius(10)
             })
+            }
         }
     }
 }

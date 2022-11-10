@@ -64,14 +64,14 @@ struct ContentView: View {
             {
                 stack.push(button)
 //                print("1 correct sound: \(button)")
-                playSound(fileName: "correct")
+                playSound(fileName: "correctv2")
                 //score = score + 5
                 correct = true
             }
             else
             {
                 print("2 wrong sound: \(button)")
-                playSound(fileName: "wrong")
+                playSound(fileName: "wrongv3")
                 //score = score - 2
                 correct = false
             }
@@ -82,13 +82,13 @@ struct ContentView: View {
             {
                 stack.push(button)
 //                print("3 correct sound: \(button)")
-                playSound(fileName: "correct")
+                playSound(fileName: "correctv2")
                 correct = true
             }
             else
             {
 //                print("4 wrong sound: \(button)")
-                playSound(fileName: "wrong")
+                playSound(fileName: "wrongv3")
                 correct = false
             }
             
