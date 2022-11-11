@@ -66,14 +66,16 @@ struct Game2: View {
             {
                 stack2.push(button)
                 print("1 correct sound: \(button)")
-                playSound(fileName: "correct")
+                playSound(fileName: "correctv2")
+                HapticsManager.shared.vibrate(for: .success)
                 //score = score + 5
                 correct2 = true
             }
             else
             {
                 print("2 wrong sound: \(button)")
-                playSound(fileName: "wrong")
+                playSound(fileName: "wrongv3")
+                HapticsManager.shared.vibrate(for: .error)
                 //score = score - 2
                 correct2 = false
             }

@@ -44,7 +44,7 @@ struct DetailsPage: View {
                     ).padding(20)
                 
                 if !textFieldValidatorEmail() {
-                      Text("There is an error in the Participant ID")
+                    Text("There is an error in the Participant ID").foregroundColor(.red)
                 }
 //
                 Text("Experiment ID")
@@ -55,7 +55,7 @@ struct DetailsPage: View {
                     ).padding(20)
                 
                 if !textFieldValidatorEmail1() {
-                      Text("There is an error in the Experiment ID")
+                    Text("There is an error in the Experiment ID").foregroundColor(.red)
                 }
                 
                 if textFieldValidatorEmail() && textFieldValidatorEmail1() && (parID != "" && expID != ""){

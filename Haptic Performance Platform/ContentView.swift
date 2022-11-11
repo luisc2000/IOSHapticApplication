@@ -65,6 +65,7 @@ struct ContentView: View {
                 stack.push(button)
 //                print("1 correct sound: \(button)")
                 playSound(fileName: "correctv2")
+                HapticsManager.shared.vibrate(for: .success)
                 //score = score + 5
                 correct = true
             }
@@ -72,6 +73,7 @@ struct ContentView: View {
             {
                 print("2 wrong sound: \(button)")
                 playSound(fileName: "wrongv3")
+                HapticsManager.shared.vibrate(for: .error)
                 //score = score - 2
                 correct = false
             }
