@@ -44,7 +44,7 @@ struct DetailsPage: View {
                     ).padding(20)
                 
                 if !textFieldValidatorEmail() {
-                      Text("Please remove any spaces from the Participant ID")
+                      Text("There is an error in the Participant ID")
                 }
 //
                 Text("Experiment ID")
@@ -55,7 +55,7 @@ struct DetailsPage: View {
                     ).padding(20)
                 
                 if !textFieldValidatorEmail1() {
-                      Text("Please remove any spaces from the Experiment ID")
+                      Text("There is an error in the Experiment ID")
                 }
                 
                 if textFieldValidatorEmail() && textFieldValidatorEmail1() && (parID != "" && expID != ""){
