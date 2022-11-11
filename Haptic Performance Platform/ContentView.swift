@@ -247,7 +247,7 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[8])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[8])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).navigationBarBackButtonHidden(true)
                     }
                 }
 //                Button(action: {

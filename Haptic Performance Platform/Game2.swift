@@ -218,7 +218,7 @@ struct Game2: View {
                             score = score - 2
                         }
                     },
-                           label: {Text(String(nums2[8])) .background(Color.clear).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).position(x: 220, y: 670)
+                           label: {Text(String(nums2[8])) .background(Color.clear).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).position(x: 220, y: 670).navigationBarBackButtonHidden(true)
                 }
                 
 //                Button(action: {
