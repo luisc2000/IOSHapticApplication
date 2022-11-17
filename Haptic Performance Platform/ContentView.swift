@@ -107,7 +107,8 @@ struct ContentView: View {
     var body: some View {
         
         ZStack {
-            VStack {
+            GeometryReader { geometry in
+            VStack (spacing: 0){
                 
                 Text("Score \(score)").id("scoreText")
                 if first == true
@@ -128,13 +129,12 @@ struct ContentView: View {
                     }
                     
                 }
-                HStack {
+                HStack (spacing: 0){
                     Section{
                         Button(action: {
                             stackLogic(button: nums[0])
                             if correct{
                                 score = score + 5
-                                
                             }
                             else if (score > 1){
                                 score = score - 2
@@ -143,7 +143,8 @@ struct ContentView: View {
                                 score = 0;
                             }
                         },
-                               label: {Text(String(nums[0])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[0])) .frame(width: geometry.size.width * 0.222, height: geometry.size.width * 0.222).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                                   .padding(geometry.size.width * 0.03).padding(.bottom, 0)
                         
                         
                         Button(action: {
@@ -156,7 +157,7 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[1])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[1])) .frame(width: geometry.size.width * 0.222, height: geometry.size.width * 0.222).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).padding(geometry.size.width * 0.03)
                         
                         Button(action: {
                             stackLogic(button: nums[2])
@@ -168,12 +169,11 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[2])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
-                        //
+                               label: {Text(String(nums[2])) .frame(width: geometry.size.width * 0.222, height: geometry.size.width * 0.222).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).padding(geometry.size.width * 0.03)
                     }
                 }
                 
-                HStack {
+                HStack (spacing: 0){
                     Section {
                         Button(action: {
                             stackLogic(button: nums[3])
@@ -185,7 +185,7 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[3])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[3])) .frame(width: geometry.size.width * 0.22, height: geometry.size.width * 0.22).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).padding(geometry.size.width * 0.03)
                         
                         Button(action: {
                             stackLogic(button: nums[4])
@@ -197,7 +197,7 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[4])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[4])) .frame(width: geometry.size.width * 0.22, height: geometry.size.width * 0.22).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).padding(geometry.size.width * 0.03)
                         
                         Button(action: {
                             stackLogic(button: nums[5])
@@ -209,11 +209,11 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[5])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[5])) .frame(width: geometry.size.width * 0.22, height: geometry.size.width * 0.22).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).padding(geometry.size.width * 0.03)
                     }
                 }
                 
-                HStack {
+                HStack (spacing: 0){
                     Section {
                         Button(action: {
                             stackLogic(button: nums[6])
@@ -225,7 +225,7 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[6])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[6])) .frame(width: geometry.size.width * 0.22, height: geometry.size.width * 0.22).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).padding(geometry.size.width * 0.03)
                         
                         Button(action: {
                             stackLogic(button: nums[7])
@@ -237,7 +237,7 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[7])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false)
+                               label: {Text(String(nums[7])) .frame(width: geometry.size.width * 0.22, height: geometry.size.width * 0.22).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).padding(geometry.size.width * 0.03)
                         
                         Button(action: {
                             stackLogic(button: nums[8])
@@ -249,20 +249,12 @@ struct ContentView: View {
                                 score = score - 2
                             }
                         },
-                               label: {Text(String(nums[8])) .frame(width: 70, height: 70).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).navigationBarBackButtonHidden(true)
+                               label: {Text(String(nums[8])) .frame(width: geometry.size.width * 0.22, height: geometry.size.width * 0.22).background(Color(hue: 1.0, saturation: 0.019, brightness: 0.822)).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).padding(geometry.size.width * 0.03).navigationBarBackButtonHidden(true)
                     }
-                }
-//                Button(action: {
-//                    timerRunning = !timerRunning
-//                    playSound(fileName: "click")
-//                },
-//                       label: {Text("Timer: \(count)").onReceive(timer) {_ in
-//                    if timerRunning {
-//                        count += 1
-//                    }
-//                } .frame(width: 150, height: 60).background(Color(red: 173 / 255, green: 216 / 255, blue: 230 / 255)).foregroundColor(Color.black)}).navigationBarBackButtonHidden(true)
+                }.padding(.horizontal, geometry.size.width * 0.1)
+                
+            }.padding(.vertical, geometry.size.width * 0.4)
             }
-            
         }
         if game2 == true {
             

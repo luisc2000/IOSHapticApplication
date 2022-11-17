@@ -18,6 +18,7 @@
 		B3224C1A28D018CC0082CB77 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3224C1928D018CC0082CB77 /* Stack.swift */; };
 		B3224C1D28D022500082CB77 /* wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3224C1B28D022500082CB77 /* wrong.mp3 */; };
 		B3224C1E28D022500082CB77 /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3224C1C28D022500082CB77 /* correct.mp3 */; };
+		B33902802925F4CA00A1896E /* Game3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B339027F2925F4CA00A1896E /* Game3.swift */; };
 		B351271A28C31FE100220FE9 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B351271928C31FE100220FE9 /* click.mp3 */; };
 		B37CA614291CE51900FE44FC /* correctv2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B37CA612291CE51900FE44FC /* correctv2.mp3 */; };
 		B37CA615291CE51900FE44FC /* wrongv2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B37CA613291CE51900FE44FC /* wrongv2.mp3 */; };
@@ -39,6 +40,7 @@
 		B3224C1928D018CC0082CB77 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		B3224C1B28D022500082CB77 /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong.mp3; sourceTree = "<group>"; };
 		B3224C1C28D022500082CB77 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
+		B339027F2925F4CA00A1896E /* Game3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game3.swift; sourceTree = "<group>"; };
 		B351271928C31FE100220FE9 /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		B37CA612291CE51900FE44FC /* correctv2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correctv2.mp3; sourceTree = "<group>"; };
 		B37CA613291CE51900FE44FC /* wrongv2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrongv2.mp3; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		B3212CBF28C1C5E3000F826E = {
 			isa = PBXGroup;
 			children = (
+				B339027F2925F4CA00A1896E /* Game3.swift */,
 				B3212CCA28C1C5E3000F826E /* Haptic Performance Platform */,
 				B3212CC928C1C5E3000F826E /* Products */,
 			);
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68A111B7291EF35400A49ED9 /* HapticsManager.swift in Sources */,
+				B33902802925F4CA00A1896E /* Game3.swift in Sources */,
 				B3212CCE28C1C5E3000F826E /* ContentView.swift in Sources */,
 				B3224C1A28D018CC0082CB77 /* Stack.swift in Sources */,
 				B3212CCC28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift in Sources */,

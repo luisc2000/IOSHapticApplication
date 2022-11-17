@@ -15,6 +15,7 @@ var correct2 = false
 var nums2 = [1, 5, 4, 7, 8, 2, 9, 6, 3, ]/*.shuffled()*/
 //    ! means that it will be initially null but shouldn't be null in the future
     //var player2: AVAudioPlayer!
+var game3 = false
 var randomInt = CGFloat.random(in: 10..<800)
 var player2: AVAudioPlayer!
 
@@ -86,13 +87,13 @@ struct Game2: View {
             {
                 stack2.push(button)
                 print("3 correct sound: \(button)")
-                playSound(fileName: "correct")
+                playSound(fileName: "correctv2")
                 correct2 = true
             }
             else
             {
                 print("4 wrong sound: \(button)")
-                playSound(fileName: "wrong")
+                playSound(fileName: "wrongv3")
                 correct2 = false
             }
             
@@ -101,6 +102,7 @@ struct Game2: View {
                 print("Success, move to the next level")
                 timerRunning = !timerRunning
                 print("You spent \(count) seconds on this level")
+                game3 = true
             }
         }
     }
@@ -184,7 +186,7 @@ struct Game2: View {
                             score = score - 2
                         }
                     },
-                           label: {Text(String(nums2[5])) .background(Color.clear).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).position(x: 300, y: 700)
+                           label: {Text(String(nums2[5])) .background(Color.clear).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).position(x: 150, y: 500)
 
                     Button(action: {
                         stackLogic(button: nums2[6])
@@ -220,18 +222,19 @@ struct Game2: View {
                             score = score - 2
                         }
                     },
-                           label: {Text(String(nums2[8])) .background(Color.clear).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).position(x: 220, y: 670).navigationBarBackButtonHidden(true)
+                           label: {Text(String(nums2[8])) .background(Color.clear).cornerRadius(22).foregroundColor(Color.black).font(.system(size: 40, weight: Font.Weight.regular))}).disabled(false).position(x: 220, y: 170).navigationBarBackButtonHidden(true)
                 }
                 
-//                Button(action: {
-//                    timerRunning = !timerRunning
-//                    playSound(fileName: "click")
-//                },
-//                       label: {Text("Timer: \(count)").onReceive(timer) {_ in
-//                    if timerRunning {
-//                        count += 1
-//                    }
-//                } .frame(width: 150, height: 60).background(Color(red: 173 / 255, green: 216 / 255, blue: 230 / 255)).foregroundColor(Color.black)}).navigationBarBackButtonHidden(true)
+        if game3 == true {
+            
+            NavigationLink(destination: Game3(),label: {
+                Text("Go to Game3!")
+                    .bold()
+                    .frame(width: 280, height: 50).background(Color(red: 100 / 255, green: 149 / 255, blue: 237 / 255))
+                    .foregroundColor(.white)
+                    .cornerRadius(10).navigationBarBackButtonHidden(true)
+            })
+        }
             }
 }
 
