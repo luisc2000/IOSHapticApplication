@@ -3,7 +3,6 @@
 //  Haptic Performance Platform
 //
 //  Created by Luis Contreras on 9/1/22.
-//  Option + Command + Enter
 
 import SwiftUI
 import AVFoundation
@@ -18,7 +17,7 @@ var first = true
 
 
 
-struct ContentView: View {
+struct Game1: View {
     //var nums = [1, 5, 4, 7, 8, 2, 9, 6, 3] // call this from the API
     @State private var numbers: [Int] = []
     @State private var experiment_description: String = ""
@@ -30,6 +29,15 @@ struct ContentView: View {
     @State var first: Bool = true
 
    
+    /// This is a helper function that plays the sound given by the parameter
+    ///
+    /// - Important: Make sure that the file is in the current directory.
+    ///
+    /// Usage:
+    ///
+    ///     playSound(fileName: "correctv2")
+    ///
+    /// - Parameter fileName: The name of the file
     func playSound(fileName: String)
     {
         let url = Bundle.main.url(forResource: fileName, withExtension: "mp3")
@@ -49,7 +57,14 @@ struct ContentView: View {
         }
     }
     
-    // decides if the number pressed is correct and adds the number to the stack
+    
+    /// Function that implements the logic of the game using a stack data structure. This function decides if the number pressed is correct. If it is then the appropriate sound is played.
+    ///
+    /// Usage:
+    ///
+    ///     stackLogic(button: 1)
+    ///
+    /// - Parameter button: The number that is to be checked.
     func stackLogic(button: Int)
     {
         if first
@@ -63,18 +78,14 @@ struct ContentView: View {
             if button == 1
             {
                 stack.push(button)
-//                print("1 correct sound: \(button)")
                 playSound(fileName: "correctv2")
                 HapticsManager.shared.vibrate(for: .success)
-                //score = score + 5
                 correct = true
             }
             else
             {
-                print("2 wrong sound: \(button)")
                 playSound(fileName: "wrongv3")
                 HapticsManager.shared.vibrate(for: .error)
-                //score = score - 2
                 correct = false
             }
         }
@@ -83,29 +94,25 @@ struct ContentView: View {
             if button - stack.peek() == 1
             {
                 stack.push(button)
-//                print("3 correct sound: \(button)")
                 playSound(fileName: "correctv2")
                 correct = true
             }
             else
             {
-//                print("4 wrong sound: \(button)")
                 playSound(fileName: "wrongv3")
                 correct = false
             }
             
             if stack.len() == 9
             {
-                print("Success, move to the next level")
                 timerRunning = !timerRunning
-                print("You spent \(count) seconds on this level")
                 game2 = true
             }
         }
     }
     
+    // the GUI of the game. It uses ZStack, HStack, and VStack
     var body: some View {
-        
         ZStack {
             GeometryReader { geometry in
             VStack (spacing: 0){
@@ -113,6 +120,7 @@ struct ContentView: View {
                 Text("Score \(score)").id("scoreText")
                 if first == true
                 {
+                    // this calls the API given by the "link" string that is defined in JSONTest file
                     Text("").onAppear{
                         Task{
                             let (data, _) = try await URLSession.shared.data(from: URL(string:link)!)
@@ -256,6 +264,7 @@ struct ContentView: View {
             }.padding(.vertical, geometry.size.width * 0.4)
             }
         }
+        // only move to the next level if all buttons were pressed. This boolean is set in stackLogic
         if game2 == true {
             
             NavigationLink(destination: Game2(),label: {
@@ -271,7 +280,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Game1()
             .previewDevice("iPhone 11")
     }
 }

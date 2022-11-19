@@ -11,9 +11,7 @@ import SwiftUI
 struct Haptic_Performance_PlatformApp: App {
     var body: some Scene {
         WindowGroup {
-//            JSONTest()
-            DetailsPage()
-//            Game2()
+            DetailsPage() // entry point of the application
         }
     }
 }

@@ -12,18 +12,15 @@
 		68A111B7291EF35400A49ED9 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A111B6291EF35400A49ED9 /* HapticsManager.swift */; };
 		68FE9A6D28F38EBB006FD538 /* Game2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE9A6C28F38EBB006FD538 /* Game2.swift */; };
 		B3212CCC28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3212CCB28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift */; };
-		B3212CCE28C1C5E3000F826E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3212CCD28C1C5E3000F826E /* ContentView.swift */; };
+		B3212CCE28C1C5E3000F826E /* Game1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3212CCD28C1C5E3000F826E /* Game1.swift */; };
 		B3212CD028C1C5E5000F826E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3212CCF28C1C5E5000F826E /* Assets.xcassets */; };
 		B3212CD328C1C5E5000F826E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3212CD228C1C5E5000F826E /* Preview Assets.xcassets */; };
 		B3224C1A28D018CC0082CB77 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3224C1928D018CC0082CB77 /* Stack.swift */; };
-		B3224C1D28D022500082CB77 /* wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3224C1B28D022500082CB77 /* wrong.mp3 */; };
-		B3224C1E28D022500082CB77 /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3224C1C28D022500082CB77 /* correct.mp3 */; };
 		B33902802925F4CA00A1896E /* Game3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B339027F2925F4CA00A1896E /* Game3.swift */; };
 		B351271A28C31FE100220FE9 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B351271928C31FE100220FE9 /* click.mp3 */; };
 		B37CA614291CE51900FE44FC /* correctv2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B37CA612291CE51900FE44FC /* correctv2.mp3 */; };
-		B37CA615291CE51900FE44FC /* wrongv2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B37CA613291CE51900FE44FC /* wrongv2.mp3 */; };
 		B37CA617291CE60700FE44FC /* wrongv3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B37CA616291CE60700FE44FC /* wrongv3.mp3 */; };
-		B3C5E306290A3AAD008A11FB /* JSONTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C5E305290A3AAD008A11FB /* JSONTest.swift */; };
+		B3C5E306290A3AAD008A11FB /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C5E305290A3AAD008A11FB /* JSON.swift */; };
 		B3CFC43F28EA362C007AF01E /* InstructionsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFC43E28EA362B007AF01E /* InstructionsPage.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,18 +31,15 @@
 		68FE9A6C28F38EBB006FD538 /* Game2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2.swift; sourceTree = "<group>"; };
 		B3212CC828C1C5E3000F826E /* Haptic Performance Platform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Haptic Performance Platform.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3212CCB28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic_Performance_PlatformApp.swift; sourceTree = "<group>"; };
-		B3212CCD28C1C5E3000F826E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B3212CCD28C1C5E3000F826E /* Game1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1.swift; sourceTree = "<group>"; };
 		B3212CCF28C1C5E5000F826E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3212CD228C1C5E5000F826E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3224C1928D018CC0082CB77 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		B3224C1B28D022500082CB77 /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong.mp3; sourceTree = "<group>"; };
-		B3224C1C28D022500082CB77 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
 		B339027F2925F4CA00A1896E /* Game3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game3.swift; sourceTree = "<group>"; };
 		B351271928C31FE100220FE9 /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		B37CA612291CE51900FE44FC /* correctv2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correctv2.mp3; sourceTree = "<group>"; };
-		B37CA613291CE51900FE44FC /* wrongv2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrongv2.mp3; sourceTree = "<group>"; };
 		B37CA616291CE60700FE44FC /* wrongv3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrongv3.mp3; sourceTree = "<group>"; };
-		B3C5E305290A3AAD008A11FB /* JSONTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTest.swift; sourceTree = "<group>"; };
+		B3C5E305290A3AAD008A11FB /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		B3CFC43E28EA362B007AF01E /* InstructionsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +57,6 @@
 		B3212CBF28C1C5E3000F826E = {
 			isa = PBXGroup;
 			children = (
-				B339027F2925F4CA00A1896E /* Game3.swift */,
 				B3212CCA28C1C5E3000F826E /* Haptic Performance Platform */,
 				B3212CC928C1C5E3000F826E /* Products */,
 			);
@@ -82,11 +75,8 @@
 			children = (
 				B3212CCB28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift */,
 				B351271928C31FE100220FE9 /* click.mp3 */,
-				B3212CCD28C1C5E3000F826E /* ContentView.swift */,
-				B3224C1C28D022500082CB77 /* correct.mp3 */,
-				B3224C1B28D022500082CB77 /* wrong.mp3 */,
+				B3212CCD28C1C5E3000F826E /* Game1.swift */,
 				B37CA612291CE51900FE44FC /* correctv2.mp3 */,
-				B37CA613291CE51900FE44FC /* wrongv2.mp3 */,
 				B37CA616291CE60700FE44FC /* wrongv3.mp3 */,
 				B3224C1928D018CC0082CB77 /* Stack.swift */,
 				B3212CCF28C1C5E5000F826E /* Assets.xcassets */,
@@ -95,7 +85,8 @@
 				B3CFC43E28EA362B007AF01E /* InstructionsPage.swift */,
 				68850FD328EA8AC60058B459 /* TermsAndConditions.swift */,
 				68FE9A6C28F38EBB006FD538 /* Game2.swift */,
-				B3C5E305290A3AAD008A11FB /* JSONTest.swift */,
+				B339027F2925F4CA00A1896E /* Game3.swift */,
+				B3C5E305290A3AAD008A11FB /* JSON.swift */,
 				68A111B6291EF35400A49ED9 /* HapticsManager.swift */,
 			);
 			path = "Haptic Performance Platform";
@@ -167,12 +158,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3224C1E28D022500082CB77 /* correct.mp3 in Resources */,
-				B3224C1D28D022500082CB77 /* wrong.mp3 in Resources */,
 				B351271A28C31FE100220FE9 /* click.mp3 in Resources */,
 				B37CA614291CE51900FE44FC /* correctv2.mp3 in Resources */,
 				B3212CD328C1C5E5000F826E /* Preview Assets.xcassets in Resources */,
-				B37CA615291CE51900FE44FC /* wrongv2.mp3 in Resources */,
 				B3212CD028C1C5E5000F826E /* Assets.xcassets in Resources */,
 				B37CA617291CE60700FE44FC /* wrongv3.mp3 in Resources */,
 			);
@@ -187,10 +175,10 @@
 			files = (
 				68A111B7291EF35400A49ED9 /* HapticsManager.swift in Sources */,
 				B33902802925F4CA00A1896E /* Game3.swift in Sources */,
-				B3212CCE28C1C5E3000F826E /* ContentView.swift in Sources */,
+				B3212CCE28C1C5E3000F826E /* Game1.swift in Sources */,
 				B3224C1A28D018CC0082CB77 /* Stack.swift in Sources */,
 				B3212CCC28C1C5E3000F826E /* Haptic_Performance_PlatformApp.swift in Sources */,
-				B3C5E306290A3AAD008A11FB /* JSONTest.swift in Sources */,
+				B3C5E306290A3AAD008A11FB /* JSON.swift in Sources */,
 				68850FD428EA8AC60058B459 /* TermsAndConditions.swift in Sources */,
 				68FE9A6D28F38EBB006FD538 /* Game2.swift in Sources */,
 				B3CFC43F28EA362C007AF01E /* InstructionsPage.swift in Sources */,
